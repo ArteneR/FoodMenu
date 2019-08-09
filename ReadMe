@@ -54,3 +54,40 @@ http://localhost:4200
 5. Add Authentication
 
 php artisan make:auth
+Login and Register buttons will appear in Laravel project
+
+
+
+6. Setup the database
+
+cd laravel-module
+Open .env file
+Edit the database connection (DB_DATABASE, DB_USERNAME, DB_PASSWORD, etc.) (after creating the Database)
+Restart the Laravel server (cd laravel-module && php artisan serve)
+
+
+
+7. Migrate data (for authentication)
+
+First, need to config the following:
+Go to: laravel-module/app/Providers/AppServiceProvider.php
+Add the following:
+
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+
+Now:
+cd laravel-module
+php artisan migrate
+This will create the migration table + authentication related tables
+
+(You can now Register a new user from Laravel app in the browser)
+
+
+
+
+
