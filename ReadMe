@@ -89,5 +89,28 @@ This will create the migration table + authentication related tables
 
 
 
+8. Make the GET auth route
+
+Go in file: laravel-module/routes/web.php
+Add the following:
+
+Auth::routes();
+
+Route::get('/auth', function() {
+    //Perform a check whether the user is authenticated or not
+    //Remove the if block during production
+    if (!Auth::check()) {
+        //If they are not, we forcefully login the user with id=1
+        $user = App\User::find(1);
+        Auth::login($user);
+    }
+    return Auth::user();
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Now we can go to http://localhost:8000/auth and we will get the info about user with id 1 (in JSON)
+
+
 
 
