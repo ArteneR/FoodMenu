@@ -48,3 +48,9 @@ ng serve
 
 Now Angular project works on port 4200 on localhost
 http://localhost:4200
+
+
+
+5. Add Authentication
+
+php artisan make:auth
