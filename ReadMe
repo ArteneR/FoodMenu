@@ -24,6 +24,27 @@ Laravel version:
 ng new angular-module
 
 
+
 2. Create Laravel module
 
 laravel new laravel-module
+
+
+
+3. Start PHP Laravel server
+
+cd laravel-module
+php artisan serve
+
+Now Laravel project works on port 8000 on localhost
+http://localhost:8000
+
+
+
+4. Start Angular server
+
+cd angular-module
+ng serve
+
+Now Angular project works on port 4200 on localhost
+http://localhost:4200
