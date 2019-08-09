@@ -1,0 +1,29 @@
+
+ReadMe file
+
+--------------------------------------------------------------------------------
+
+Angular version:
+Laravel version: 
+
+--------------------------------------------------------------------------------
+
+### HOW TO RUN THE PROJECT ###
+
+
+
+
+
+--------------------------------------------------------------------------------
+
+###  STEPS FOR CREATING THE PROJECT  ###
+
+
+1. Create Angular module
+
+ng new angular-module
+
+
+2. Create Laravel module
+
+laravel new laravel-module
