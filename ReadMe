@@ -194,3 +194,44 @@ Add the following to the $middleware array:
 \App\Http\Middleware\Cors::class
 
 
+
+10. Make User model
+
+Create file angular-module/src/app/User.ts with the following contents:
+
+export class User {
+    id: number;
+    name: string;
+    email: string;
+}
+
+
+In app.component.ts:
+
+Add
+import { User } from './User';
+
+
+export class AppComponent implements OnInit {
+    title = 'angular-module';
+    user: User;
+  
+    constructor(private http: HttpClient) {}
+    
+    ngOnInit() {
+        // Make the HTTP request:
+        this.http.get<User>('http://localhost:8000/auth').subscribe(data => {
+            console.log(data);
+            this.user = data;
+        });
+    }
+}
+
+
+
+In app.component.html change the welcome message to:
+
+Hello {{ user?.name }}!
+
+
+
