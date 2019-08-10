@@ -249,3 +249,10 @@ http://localhost:8000/app
 
 
 
+12. Change the redirect path
+
+In laravel-module/app/Controllers/Auth/LoginController.php
+AND
+In laravel-module/app/Controllers/Auth/RegisterController.php
+Change:
+protected $redirectTo = '/app';
