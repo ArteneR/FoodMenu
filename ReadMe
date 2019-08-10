@@ -15,12 +15,14 @@ PHP version: 7.2.12
 Start Angular server:
 cd angular-module
 ng serve
+Go to http://localhost:4200
 
 
 (In a separate terminal)
 Start Laravel server:
 cd laravel-module
 php artisan serve
+Go to http://localhost:8000
 
 
 
