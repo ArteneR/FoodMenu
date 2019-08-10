@@ -235,3 +235,17 @@ Hello {{ user?.name }}!
 
 
 
+11. Linking the two separate apps
+
+Open angular-module/angular.json
+Change   projects -> angular-module -> architect -> build -> options -> outputPath to: "../laravel-module/public/app"
+
+Build the project:
+
+ng build --base-href http://localhost:8000/app/
+
+Access the app (the Laravel+Angular app):
+http://localhost:8000/app
+
+
+
