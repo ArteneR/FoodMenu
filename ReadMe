@@ -12,7 +12,15 @@ PHP version: 7.2.12
 
 ### HOW TO RUN THE PROJECT ###
 
+Start Angular server:
+cd angular-module
+ng serve
 
+
+(In a separate terminal)
+Start Laravel server:
+cd laravel-module
+php artisan serve
 
 
 
