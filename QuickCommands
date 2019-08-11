@@ -1,0 +1,18 @@
+########################
+###  Quick commands  ###
+########################
+
+--------------------------------------------------------------------------------
+
+1. Generate Module
+
+ng generate module app-routing --module=app
+
+--flat - put the file in 'src/app' instead of its own folder
+--module=app - tell the CLI to register it in the imports array of the AppModule
+
+
+
+2. Generate Component
+
+ng generate component pokemon-list
