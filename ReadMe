@@ -10,6 +10,16 @@ PHP version: 7.2.12
 
 --------------------------------------------------------------------------------
 
+### HOW TO RUN & BUILD THE PROJECT - QUICK SHORTCUTS ###
+
+sh start-angular.sh             Start Angular project server
+sh start-laravel.sh             Start Laravel project server
+sh build-angular-project.sh     Build Angular project inside the Laravel project
+
+
+
+--------------------------------------------------------------------------------
+
 ### HOW TO RUN THE PROJECT ###
 
 Start Angular server:
@@ -23,6 +33,16 @@ Start Laravel server:
 cd laravel-module
 php artisan serve
 Go to http://localhost:8000
+
+
+
+### Build the project (Angular) into Laravel project ###
+
+cd agular-module
+ng build --base-href http://localhost:8000/app/
+
+Access the app (the Laravel+Angular app):
+http://localhost:8000/app
 
 
 
