@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WebsiteComponent } from './website.component';
-import { Page1Component } from './page1/page1.component';
-import { Page2Component } from './page2/page2.component';
 
 
 const routes: Routes = [
@@ -12,13 +10,11 @@ const routes: Routes = [
         children: [
             { 
                 path: 'page1',
-                component: Page1Component,
-                pathMatch: 'full'
+                loadChildren: () => import('./page1/page1.module').then(mod => mod.Page1Module)
             },
             { 
                 path: 'page2',
-                component: Page2Component,
-                pathMatch: 'full'
+                loadChildren: () => import('./page2/page2.module').then(mod => mod.Page2Module)
             }
         ]
     }
