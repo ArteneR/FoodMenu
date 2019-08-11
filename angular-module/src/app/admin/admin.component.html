@@ -1,5 +1,10 @@
-<p>
-  Admin works!
-</p>
+<div style='padding: 20px; background-color: #3d4852; color: #EEEEEE;'>
+    Admin works! This is Admin navbar
+</div>  
 
-<button [routerLink]="['']" routerLinkActive="active">Go to Website</button>
+<button [routerLink]="['/']" routerLinkActive="active">Go to Website</button>
+
+<button [routerLink]="['/admin/page1']">Admin - Page1</button>
+<button [routerLink]="['/admin/page2']">Admin - Page2</button>
+
+<router-outlet></router-outlet>

@@ -1,5 +1,10 @@
-<p>
-    Website works!
-</p>
+<div style='padding: 20px; background-color: #b8daff; color: #111111;'>
+    Website works! This is Website navbar
+</div>  
 
-<button [routerLink]="['admin']" routerLinkActive="active">Go to Admin</button>
+<button [routerLink]="['/admin']" routerLinkActive="active">Go to Admin</button>
+
+<button [routerLink]="['/page1']">Website - Page1</button>
+<button [routerLink]="['/page2']">Website - Page2</button>
+
+<router-outlet></router-outlet>

@@ -10,7 +10,12 @@ const routes: Routes = [
     {
         path: 'admin',
         loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule)
-    }
+    },
+//    {
+//        // Page not found
+//        path: '**',
+//        loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule)
+//    }
 ];
 
 
