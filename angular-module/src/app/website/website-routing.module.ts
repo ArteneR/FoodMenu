@@ -9,12 +9,19 @@ const routes: Routes = [
         component: WebsiteComponent,
         children: [
             { 
+                // Page1
                 path: 'page1',
                 loadChildren: () => import('./page1/page1.module').then(mod => mod.Page1Module)
             },
-            { 
+            {
+                // Page2
                 path: 'page2',
                 loadChildren: () => import('./page2/page2.module').then(mod => mod.Page2Module)
+            },
+            {
+                // Home (Page3)
+                path: '',
+                loadChildren: () => import('./page3-home/page3-home.module').then(mod => mod.Page3HomeModule)
             }
         ]
     }
