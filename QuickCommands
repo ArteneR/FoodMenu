@@ -16,3 +16,16 @@ ng generate module app-routing --module=app
 2. Generate Component
 
 ng generate component pokemon-list
+
+
+
+3. Generate Guard
+
+ng generate guard shared/auth/auth
+
+
+
+4. Generate Service
+
+ng generate service shared/auth/auth
+
