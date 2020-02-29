@@ -19,6 +19,16 @@ sh start-angular.sh             Start Angular project server
 sh start-laravel.sh             Start Laravel project server
 sh build-angular-project.sh     Build Angular project inside the Laravel project
 
+NEW:
+
+Run the docker-compose up command (detached) to start all containers: 
+    docker-compose up -d
+
+Open Browser on:
+    http://localhost:8080
+
+Stop all containers:
+    docker-compose down
 
 
 --------------------------------------------------------------------------------
