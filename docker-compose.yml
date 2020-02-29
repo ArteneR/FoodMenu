@@ -1,15 +1,19 @@
 version: "3.2"
 
 services:
+  # PHP
   php:
     build: './docker/php/'
+    restart: always
     networks:
       - backend
     volumes:
-      - ./public_html/:/var/www/html/
+      - .:/var/www/html/
 
+  # Apache
   apache:
     build: './docker/apache/'
+    restart: always
     depends_on:
       - php
       - mysql
@@ -19,10 +23,12 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./public_html/:/var/www/html/
+      - .:/var/www/html/
 
+  # MySQL
   mysql:
     build: './docker/mysql/'
+    restart: always
     ports:
       - "3307:3306"
     networks:
