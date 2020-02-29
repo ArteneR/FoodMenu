@@ -36,6 +36,10 @@ Build all the images:
 See all running docker containers:
     docker ps -a
 
+Connect to a running container:
+    docker exec -it <container_name_or_id> bash
+    docker exec -it <container_name_or_id> ls       (to see the list of files, eg. if 'bash' command is not found)
+
 
 --------------------------------------------------------------------------------
 

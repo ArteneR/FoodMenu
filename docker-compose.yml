@@ -23,6 +23,8 @@ services:
 
   mysql:
     build: './docker/mysql/'
+    ports:
+      - "3307:3306"
     networks:
       - backend
     environment:
