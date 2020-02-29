@@ -30,6 +30,12 @@ Open Browser on:
 Stop all containers:
     docker-compose down
 
+Build all the images:
+    docker-compose build
+
+See all running docker containers:
+    docker ps -a
+
 
 --------------------------------------------------------------------------------
 
