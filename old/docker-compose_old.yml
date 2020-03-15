@@ -1,0 +1,53 @@
+version: "3.7"
+
+services:
+  # Application
+  app:
+    build: './docker/application/'
+    restart: unless-stopped
+    networks:
+      - frontend
+      - backend
+
+  # PHP
+  php:
+    build: './docker/php/'
+    restart: unless-stopped
+    networks:
+      - backend
+    volumes:
+      - .:/var/www/html/
+
+  # Apache
+  apache:
+    build: './docker/apache/'
+    restart: unless-stopped
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - frontend
+      - backend
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html/
+
+  # MySQL
+  mysql:
+    build: './docker/mysql/'
+    restart: unless-stopped
+    ports:
+      - "3307:3306"
+    networks:
+      - backend
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+    volumes:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
