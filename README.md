@@ -1,4 +1,24 @@
 # FoodMenu ReadMe
+
+(Made after following tutorial: https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose)
+
+1. Run composer install (via docker image):
+cd src/laravel-module
+docker run --rm -v $(pwd):/app composer install
+
+2. Set permissions on the project directory so that it is owned by your non-root user:
+sudo chown -R $USER:$USER ~/<proj_folder>
+
+3. Generate key
+docker-compose exec app php artisan key:generate
+
+4. Cache env settings
+docker-compose exec app php artisan config:cache
+
+
+
+==========================================
+
 This repo contains the code for the FoodMenu platform (code migrated from Bitbucket.org).
 
 This acts also as a template bolierplate code for Angular + Laravel projects.
